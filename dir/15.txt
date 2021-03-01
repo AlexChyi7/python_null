@@ -1,0 +1,24 @@
+前情回顾
+
+1.线程
+    * 多任务编程的机制
+    * 线程是进程的一个分支
+    * 线程的创建销毁 资源消耗低
+    * 线程共享进程资源
+
+2.创建线程
+    t = Thread()
+    t.start()
+    t.join()    daemon = True
+
+    自定义线程类
+
+3.同步互斥方法
+    e = Event() e.set() e.clear() e.wait()
+    lock=Lock() lock.acquire() lock.release()
+
+    死锁:逻辑混乱
+
+4.GIL问题
+    Python线程不会出现并行执行
+    在无阻塞的事件执行中不能提高效率

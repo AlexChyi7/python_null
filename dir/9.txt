@@ -1,0 +1,46 @@
+前情回顾
+
+1.视图 View
+    作用: 简化复杂的操作
+         使数据在使用的时候更加清晰
+         维护数据的安全
+
+2.函数和存储过程
+
+    函数:有返回值 得到一个明确结果
+    存储过程:没有返回值 过程中做了什么事情
+
+    delimiter $$
+    create function func() returns [type]
+    begin
+        函数体
+        declare a int;
+        return val;
+    end $$
+    delimiter ;
+
+    delimiter $$
+    create procedure proc()
+    begin
+        declare a int;
+        函数体
+    end $$
+    delimiter ;
+    call proc();
+
+    drop function/procedure [name]
+
+3.事务控制
+    意义:事件具有完整执行的能力
+        多终端操作数据库时,产生隔离
+    四大特性: 原子性 一致性 隔离性 持久性
+
+    隔离性:隔离级别 读未提交 读已提交 可重复读 串行化
+
+4.数据库优化
+
+    数据库设计范式
+    引擎选择
+    字段数据类型和键的选择
+    sql语句的优化
+    表的拆分
